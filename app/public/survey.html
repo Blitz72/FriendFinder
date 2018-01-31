@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Friend Finder Survey</title>
+
+	<!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Latest compiled and minified jQuery -->
+	<!-- <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script> -->
+
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body style="background: #ccc">
+	<div class="jumbotron text-center">
+		<h1>Welcome to the Friend Finder Survey!</h1>
+		<h3>Just answer a few short questions and you'll be on your way to social nirvana!</h3>
+		<br>
+		<a href="/home"><button type="button" class="btn btn-md btn-primary">There's no place like  <span class="glyphicon glyphicon-home"></span></button></a>
+	</div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Your new best friend is...</h4>
+        </div>
+        <div class="modal-body">
+          <div><p id="modal-name" class="text-center"></p></div>
+          <div id="modal-photo" class="text-center"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+	<div class="container panel panel-default" style="background: #eee">
+		<div class="form-group">
+    	<label for="nameInput"><h3>Name:</h3></label>
+    	<input type="text" class="form-control" id="nameInput" placeholder="Enter your name here!">
+  	</div>
+  	<div class="form-group">
+    	<label for="photoLink"><h3>Link to your photo:</h3></label>
+    	<input type="text" class="form-control" id="photoLink" placeholder="http://link-2-my-photo.com (copy and paste if you have to!)">
+  	</div>
+  	<br>
+		<div class="question"><h3>Question 1</h3>
+			<p style="font-size: 18px">You like Star Wars more than Star Trek.</p>
+			<div class="row">
+				<div class="col-lg-4 col-sm-6">
+					<select id="q1" class="form-control">
+						<option value="">Select an option:</option>
+		    		<option value="5">5 (May the force be with you!)</option>
+		    		<option value="4">4</option>
+		   			<option value="3">3 (Somewhat Agree)</option>
+		    		<option value="2">2</option>
+		    		<option value="1">1 (Engage!)</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="question"><h3>Question 2</h3>
+			<p style="font-size: 18px">You'd rather have a good blaster at your side than a lightsaber.</p>
+			<div class="row">
+				<div class="col-lg-4 col-sm-6">
+					<select id="q2" class="form-control">
+						<option value="">Select an option:</option>
+		    		<option value="5">5 (Pew! Pew!)</option>
+		    		<option value="4">4</option>
+		   			<option value="3">3 (Somewhat Agree)</option>
+		    		<option value="2">2</option>
+		    		<option value="1">1 (Whoosh!)</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="question"><h3>Question 3</h3>
+			<p style="font-size: 18px">Heck with all this Sci-Fi stuff, give me a good romance.</p>
+			<div class="row">
+				<div class="col-lg-4 col-sm-6">
+					<select id="q3" class="form-control">
+						<option value="">Select an option:</option>
+		    		<option value="5">5 (XOXO!)</option>
+		    		<option value="4">4</option>
+		   			<option value="3">3 (Somewhat Agree)</option>
+		    		<option value="2">2</option>
+		    		<option value="1">1 (Robots 'n' Laserbeams)</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="question"><h3>Question 4</h3>
+			<p style="font-size: 18px">There's nothing more satisfying than hard work.</p>
+			<div class="row">
+				<div class="col-lg-4 col-sm-6">
+					<select id="q4" class="form-control">
+						<option value="">Select an option:</option>
+		    		<option value="5">5 (Bring it on!)</option>
+		    		<option value="4">4</option>
+		   			<option value="3">3 (Somewhat Agree)</option>
+		    		<option value="2">2</option>
+		    		<option value="1">1 (I think I hear my couch calling)</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="question"><h3>Question 5</h3>
+			<p style="font-size: 18px">Winter is the best season of all.</p>
+			<div class="row">
+				<div class="col-lg-4 col-sm-6">
+					<select id="q5" class="form-control">
+						<option value="">Select an option:</option>
+		    		<option value="5">5 (Let it Snow!)</option>
+		    		<option value="4">4</option>
+		   			<option value="3">3 (Somewhat Agree)</option>
+		    		<option value="2">2</option>
+		    		<option value="1">1 (Is it summer yet?)</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="question"><h3>Question 6</h3>
+			<p style="font-size: 18px">I'd rather go out to eat than dine in.</p>
+			<div class="row">
+				<div class="col-lg-4 col-sm-6">
+					<select id="q6" class="form-control">
+						<option value="">Select an option:</option>
+		    		<option value="5">5 (Check, please!)</option>
+		    		<option value="4">4</option>
+		   			<option value="3">3 (Somewhat Agree)</option>
+		    		<option value="2">2</option>
+		    		<option value="1">1 (Love to cook!)</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="question"><h3>Question 7</h3>
+			<p style="font-size: 18px">Pets are man's best friends.</p>
+			<div class="row">
+				<div class="col-lg-4 col-sm-6">
+					<select id="q7" class="form-control">
+						<option value="">Select an option:</option>
+		    		<option value="5">5 (That's why have a Dyson "Animal Control")</option>
+		    		<option value="4">4</option>
+		   			<option value="3">3 (Somewhat Agree)</option>
+		    		<option value="2">2</option>
+		    		<option value="1">1 (No thanks, I'm allergic)</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="question"><h3>Question 8</h3>
+			<p style="font-size: 18px">I love being surrounded by other people.</p>
+			<div class="row">
+				<div class="col-lg-4 col-sm-6">
+					<select id="q8" class="form-control">
+						<option value="">Select an option:</option>
+		    		<option value="5">5 (Social butterfly, that's me)</option>
+		    		<option value="4">4</option>
+		   			<option value="3">3 (Somewhat Agree)</option>
+		    		<option value="2">2</option>
+		    		<option value="1">1 (I put the "intro" in introvert)</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="question"><h3>Question 9</h3>
+			<p style="font-size: 18px">You squeeze the toothpaste from the bottom.</p>
+			<div class="row">
+				<div class="col-lg-4 col-sm-6">
+					<select id="q9" class="form-control">
+						<option value="">Select an option:</option>
+		    		<option value="5">5 (Hello!)</option>
+		    		<option value="4">4</option>
+		   			<option value="3">3 (Somewhat Agree)</option>
+		    		<option value="2">2</option>
+		    		<option value="1">1 (Who cares, at least I'm using toothpaste!)</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="question"><h3>Question 10</h3>
+			<p style="font-size: 18px">Laughter is the best medicine.</p>
+			<div class="row">
+				<div class="col-lg-4 col-sm-6">
+					<select id="q10" class="form-control">
+						<option value="">Select an option:</option>
+		    		<option value="5">5 (Love the 'F5' key. It's so refreshing!)</option>
+		    		<option value="4">4</option>
+		   			<option value="3">3 (Somewhat Agree)</option>
+		    		<option value="2">2</option>
+		    		<option value="1">1 (I am a Stoic like my father before me.)</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<button type="submit" id="submit" class="btn btn-default btn-lg btn-primary">Submit</button>
+		<br><br>
+	</div>
+
+	<script type="text/javascript">
+		$("#submit").on("click", function(event) {
+			var counter = 0;
+      event.preventDefault();
+      $('.form-control').each(function() {
+		    if ( $(this).val() === '' ) {
+		      alert("Please enter data for all fields.");
+		      counter++;
+		      return false;
+		    } else {
+		    	return true;
+		    }
+		  });
+		  // console.log(counter);
+		  if (counter === 0) {
+			  var answers = [];
+			  answers.push($("#q1").val());
+			  answers.push($("#q2").val());
+			  answers.push($("#q3").val());
+			  answers.push($("#q4").val());
+			  answers.push($("#q5").val());
+			  answers.push($("#q6").val());
+			  answers.push($("#q7").val());
+			  answers.push($("#q8").val());
+			  answers.push($("#q9").val());
+			  answers.push($("#q10").val());
+			  // console.log(answers);
+			  var newFriend = {
+			  	name: $("#nameInput").val().trim(),
+			  	photo: $("#photoLink").val().trim(),
+			  	answers: answers
+				}
+				console.log(newFriend);
+				$.ajax({
+					type: "POST",
+					url: "/api/friends",
+					data: newFriend,
+					dataType: "json",
+					traditional: true,
+					success: function(data) {
+						if (data) {
+							console.log("data: ", data);
+						}
+						$("#modal-name").html("<h3>" + data.name + "</h3>");
+						$("#modal-photo").html('<img src="' + data.photo + '" alt="' + data.name +
+							'" height="250" width="250">');
+						// $("#modal-photo").html(data.photo);
+						$('#myModal').modal();
+						$(".form-control").val("");
+					},
+					error: function(data) {
+						console.log("Error: ", data);
+					}
+				});
+			}
+		});
+
+	</script>
+
+</body>
+</html>
