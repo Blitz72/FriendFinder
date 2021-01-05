@@ -17,7 +17,7 @@ var friendsList = [
 	},
 	{
 		name: "Steve",
-		photo: "http://famepace.com/wp-content/uploads/2017/09/Funny-Mr-Bean-Photoshop-13.jpg",
+		photo: "https://static.boredpanda.com/blog/wp-content/uploads/2017/03/mr-bean-rowan-atkinson-photoshop-6-58d8b66ac3ac5__880.jpg",
 		answers: [4, 4, 5, 5, 1, 2, 4, 5, 3, 3]
 	},
 	{
