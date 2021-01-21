@@ -2,7 +2,7 @@ var friendsList = [
 	{
 		name: "David",
 		// photo: "https://i.ytimg.com/vi/tldi7Zz8DRs/maxresdefault.jpg",
-		photo: "https://www.demilked.com/magazine/wp-content/uploads/2017/03/mr-bean-rowan-atkinson-photoshop-battle-52.jpg",
+		photo: "https://static.boredpanda.com/blog/wp-content/uploads/2017/03/IMG_3388-58d93380e4b04__880.jpg",
 		answers: [5, 2, 4, 3, 4, 1, 5, 4, 4, 3]
 	},
 	{
@@ -47,7 +47,7 @@ var friendsList = [
 	},
 	{
 		name: "Mitch",
-		photo: "https://www.demilked.com/magazine/wp-content/uploads/2017/03/mr-bean-rowan-atkinson-photoshop-battle-34.jpg",
+		photo: "https://static.boredpanda.com/blog/wp-content/uploads/2017/03/mr-bean-rowan-atkinson-photoshop-58d8d497f0b5a__880.jpg",
 		answers: [4, 3, 3, 4, 2, 2, 2, 4, 5, 3]
 	}
 ]
